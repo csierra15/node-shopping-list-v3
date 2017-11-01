@@ -77,7 +77,7 @@ app.get('/recipes', (req, res) => {
   res.json(Recipes.get());
 })
 
-app.delete('/recipe/:id', (req, res) => {
+app.delete('/recipes/:id', (req, res) => {
   Recipe.delete(req.params.id);
   console.log(`Deleted recipe \`${req.params.id}\``);
   res.status(204).end();
